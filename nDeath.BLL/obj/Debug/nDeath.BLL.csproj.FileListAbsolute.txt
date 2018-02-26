@@ -1,0 +1,11 @@
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\nDeath.BLL.dll
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\nDeath.BLL.pdb
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\nDeath.DAL.dll
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\EntityFramework.dll
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\nDeath.DAL.pdb
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\EntityFramework.xml
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\obj\Debug\nDeath.BLL.csprojResolveAssemblyReference.cache
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\obj\Debug\nDeath.BLL.dll
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\obj\Debug\nDeath.BLL.pdb
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\Ninject.dll
+C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.BLL\bin\Debug\Ninject.xml
