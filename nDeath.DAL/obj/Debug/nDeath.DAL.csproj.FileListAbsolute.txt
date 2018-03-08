@@ -10,3 +10,16 @@ C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.DAL\bin\De
 C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.DAL\obj\Debug\nDeath.DAL.dll
 C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.DAL\obj\Debug\nDeath.DAL.pdb
 C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.DAL\obj\Debug\nDeath.DAL.csprojResolveAssemblyReference.cache
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\nDeath.DAL.dll.config
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\nDeath.DAL.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\nDeath.DAL.pdb
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\EntityFramework.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\EntityFramework.xml
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.csprojResolveAssemblyReference.cache
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.csproj.CoreCompileInputs.cache
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.pdb

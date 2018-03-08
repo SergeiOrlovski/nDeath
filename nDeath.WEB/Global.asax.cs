@@ -16,7 +16,7 @@ namespace nDeath.WEB
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             NinjectModule dataModule = new DataModule();
-            NinjectModule serviceModule = new ServiceModule("DefaultConnection");
+            NinjectModule serviceModule = ServiceModule.GetInstance("DefaultConnection");
             var kernel = new StandardKernel(dataModule, serviceModule);
             DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
         }

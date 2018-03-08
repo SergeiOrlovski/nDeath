@@ -8,10 +8,24 @@ namespace nDeath.BLL.Infrastructure
     public class ServiceModule : NinjectModule
     {
         private string connectionString;
-
-        public ServiceModule(string connect)
+        private static ServiceModule instance;
+        private ServiceModule(string _connectionString)
         {
-            connectionString = connect;
+            connectionString = _connectionString;
+        }
+
+        public static ServiceModule GetInstance(string connectionString)
+        {
+            if (instance == null)
+            {
+                lock (typeof(ServiceModule))
+                {
+                    if (instance == null)
+                        instance = new ServiceModule(connectionString);
+                }
+            }
+
+            return instance;
         }
 
         public override void Load()

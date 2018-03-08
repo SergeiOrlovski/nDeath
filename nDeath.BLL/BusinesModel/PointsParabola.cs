@@ -15,11 +15,6 @@ namespace nDeath.BLL.BusinesModel
             _cacheData = null;
         }
 
-        public static double CoordinateXo(double b, double a)
-        {
-            return -b / (2 * a);
-        }
-
         public static double CoordinateY(double x, double a, double b, double c)
         {
 
@@ -29,8 +24,10 @@ namespace nDeath.BLL.BusinesModel
         public List<CacheDataDTO> GetCacheDatas(ParamDTO parameters)
         {
             List<CacheDataDTO> cordinate = new List<CacheDataDTO>();
-            var xmin = PointsParabola.CoordinateXo(parameters.B, parameters.A) + parameters.RangeFrom;
-            var xmax = PointsParabola.CoordinateXo(parameters.B, parameters.A) + parameters.RangeTo;
+            Create create = new CreateXmin();
+            var xmin = create.FactoryMethod().CoordinateX(parameters.B, parameters.A, parameters.RangeFrom);
+            create = new CreateXmax();
+            var xmax = create.FactoryMethod().CoordinateX(parameters.B, parameters.A, parameters.RangeTo);
             for (var x = xmin; x <= xmax; x += parameters.Step)
             {
                 var y = PointsParabola.CoordinateY(x, parameters.A, parameters.B, parameters.C);
@@ -41,5 +38,56 @@ namespace nDeath.BLL.BusinesModel
         }
 
         
+    }
+
+    abstract class Point
+    {
+        public abstract double CoordinateX(double b, double a, double range);
+    }
+
+    class Xmin : Point
+    {
+        private static double CoordinateXo(double b, double a)
+        {
+            return -b / (2 * a);
+        }
+
+        public override double CoordinateX(double b, double a, double rangeFrom)
+        {
+            return CoordinateXo(b, a) + rangeFrom; ;
+        }
+    }
+
+    class Xmax: Point
+    {
+        private static double CoordinateXo(double b, double a)
+        {
+            return -b / (2 * a);
+        }
+        public override double CoordinateX(double b, double a, double rangeTo)
+        {
+            return CoordinateXo(b,a)+rangeTo;
+        }
+    }
+
+    abstract class Create
+    {
+        public abstract Point FactoryMethod();
+    }
+
+    class CreateXmin : Create
+    {
+        public override Point FactoryMethod()
+        {
+            return new Xmin( );
+        }
+    }
+
+    class CreateXmax : Create
+    {
+        public override Point FactoryMethod()
+        {
+            return new Xmax();
+        }
     }
 }
