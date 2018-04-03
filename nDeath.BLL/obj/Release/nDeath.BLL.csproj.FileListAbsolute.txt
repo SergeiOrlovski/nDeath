@@ -1,0 +1,11 @@
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\nDeath.BLL.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\nDeath.BLL.pdb
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\nDeath.DAL.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\Ninject.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\EntityFramework.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\nDeath.DAL.pdb
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\Ninject.xml
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\bin\Release\EntityFramework.xml
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\obj\Release\nDeath.BLL.csprojResolveAssemblyReference.cache
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\obj\Release\nDeath.BLL.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.BLL\obj\Release\nDeath.BLL.pdb

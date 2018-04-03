@@ -48,7 +48,6 @@ C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.WEB\bin\Ni
 C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.WEB\bin\Ninject.Web.Common.WebHost.xml
 C:\Users\personal\documents\visual studio 2015\Projects\nDeath\nDeath.WEB\bin\Ninject.Web.Mvc.xml
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\obj\Debug\nDeath.WEB.csprojResolveAssemblyReference.cache
-C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\obj\Debug\nDeath.WEB.csproj.CoreCompileInputs.cache
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\obj\Debug\nDeath.WEB.dll
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\obj\Debug\nDeath.WEB.pdb
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\roslyn\csc.exe
@@ -84,7 +83,6 @@ C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDea
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\EntityFramework.dll
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\nDeath.BLL.pdb
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\nDeath.DAL.pdb
-C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\nDeath.DAL.dll.config
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\Newtonsoft.Json.xml
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\Ninject.xml
@@ -98,3 +96,8 @@ C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDea
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\System.Web.Helpers.xml
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\System.Web.Mvc.xml
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\EntityFramework.xml
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\EntityFramework.SqlServer.dll
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\EntityFramework.SqlServer.xml
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\nDeath.BLL.dll.config
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\bin\nDeath.DAL.dll.config
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.WEB\obj\Debug\nDeath.WEB.csproj.CoreCompileInputs.cache

@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using nDeath.BLL.BusinesModel;
 using nDeath.BLL.DTO;
 using nDeath.WEB.Models;
 using nDeath.BLL.Interfaces;
+using System.Threading;
 
 namespace nDeath.WEB.Controllers
 {
@@ -23,26 +25,26 @@ namespace nDeath.WEB.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(ParamViewModel coefficient)
+        public async Task<ActionResult> Index(ParamViewModel coefficient)
         {
 
             if (ModelState.IsValid)
             {
                 ParamDTO _coefficient = coefficient.ReplaceType(coefficient);
                 PointsParabola pointPar = new PointsParabola(coefficient.ReplaceType(coefficient));
-                int paramId = service.FindParamsId(_coefficient);
+                int paramId = await service.FindParamsIdAsync(_coefficient);
                 List<CacheDataDTO> cacheData = new List<CacheDataDTO>();
                 List<PointsViewModel> points = new List<PointsViewModel>();
-                    if (paramId == -1)
-                    {
-                        cacheData = pointPar.GetCacheDatas(_coefficient);
-                        service.AddParamsAndCacheData(_coefficient, cacheData);
-                    }
-                    else
-                    {
-                        cacheData = service.GetCacheData(paramId);
-                    }
-                foreach(var c in cacheData)
+                if (paramId == -1)
+                {
+                   cacheData = pointPar.GetCacheDatas(_coefficient);
+                   await service.AddParamsAndCacheDataAsync(_coefficient, cacheData);
+                }
+                else
+                {
+                    cacheData = await service.GetCacheDataAsync(paramId);
+                }
+                foreach (var c in cacheData)
                 {
                     points.Add(new PointsViewModel(c.PointX, c.PointY));
                 }
@@ -51,7 +53,6 @@ namespace nDeath.WEB.Controllers
                 return View("Index");
             }
             return View("Index");
-
         }
     }
 }

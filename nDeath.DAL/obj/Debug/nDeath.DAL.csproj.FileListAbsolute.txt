@@ -20,6 +20,6 @@ C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDea
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\bin\Debug\Newtonsoft.Json.xml
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.csprojResolveAssemblyReference.cache
-C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.csproj.CoreCompileInputs.cache
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.dll
 C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.pdb
+C:\Users\personal\Documents\Visual Studio 2015\Projects\nDeath(3-level-app)\nDeath.DAL\obj\Debug\nDeath.DAL.csproj.CoreCompileInputs.cache

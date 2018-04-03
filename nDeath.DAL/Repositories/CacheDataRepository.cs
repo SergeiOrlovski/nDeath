@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using nDeath.DAL.EF;
 using nDeath.DAL.Entities;
@@ -25,7 +25,7 @@ namespace nDeath.DAL.Repositories
 
         public IEnumerable<CacheData> Find(Func<CacheData, Boolean> predicate)
         {
-            return _dbcontext.CacheDatas.Where(predicate).ToList();
+            return _dbcontext.CacheDatas.Where(predicate).ToList();  
         }
     }
 }

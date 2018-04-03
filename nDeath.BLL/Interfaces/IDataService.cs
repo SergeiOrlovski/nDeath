@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using nDeath.BLL.DTO;
 
 namespace nDeath.BLL.Interfaces
 {
     public interface IDataService 
     {
-        int FindParamsId(ParamDTO param);
-        void AddParamsAndCacheData(ParamDTO param, List<CacheDataDTO> cacheData);
-        List<CacheDataDTO> GetCacheData(int id);
+        Task<int> FindParamsIdAsync(ParamDTO param);
+        Task AddParamsAndCacheDataAsync(ParamDTO param, List<CacheDataDTO> cacheData);
+        Task<List<CacheDataDTO>> GetCacheDataAsync(int id);
         void Dispose();
     }
 }

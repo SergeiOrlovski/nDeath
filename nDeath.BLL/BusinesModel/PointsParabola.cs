@@ -30,7 +30,7 @@ namespace nDeath.BLL.BusinesModel
             var xmax = create.FactoryMethod().CoordinateX(parameters.B, parameters.A, parameters.RangeTo);
             for (var x = xmin; x <= xmax; x += parameters.Step)
             {
-                var y = PointsParabola.CoordinateY(x, parameters.A, parameters.B, parameters.C);
+                var y = CoordinateY(x, parameters.A, parameters.B, parameters.C);
                 cordinate.Add(new CacheDataDTO {PointX = x, PointY = y});
             }
             _cacheData = cordinate;
@@ -54,7 +54,7 @@ namespace nDeath.BLL.BusinesModel
 
         public override double CoordinateX(double b, double a, double rangeFrom)
         {
-            return CoordinateXo(b, a) + rangeFrom; ;
+            return CoordinateXo(b, a) + rangeFrom; 
         }
     }
 

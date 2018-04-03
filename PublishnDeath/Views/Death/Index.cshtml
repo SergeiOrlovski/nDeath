@@ -1,0 +1,122 @@
+﻿@using System.Web.Script.Serialization
+
+@{
+    ViewBag.Title = "Death Valley";
+}
+
+<h2>Death Valley(3-level  web-application): Parabola</h2>
+
+<div>
+    <canvas id="c1" width="400" height="400" style=""></canvas>
+</div>
+
+<div>
+    @using (Html.BeginForm("Index"))
+    {
+        @Html.ValidationSummary();
+        <table border="1" margin="3">
+            <tr>
+                <td>Function:</td>
+                <td>y=<input name="a" type="text" size="1" />X^2+<input name="b" type="text" size="1" />X+<input name="c" type="text" size="1" /></td>
+            </tr>
+            <tr>
+                <td>Step:</td>
+                <td><input name="step" type="text" size="1" /></td>
+            </tr>
+            <tr>
+                <td>From:</td>
+                <td><input name="rangeFrom" type="text" size="1" /> to <input name="rangeTo" type="text" size="1" /></td>
+            </tr>
+        </table>
+        <input id="btnsubmit " type="submit" value="Plot" class="btn btn-primary" />
+    }
+</div>
+
+@{
+    var jsonData = new JavaScriptSerializer().Serialize(ViewBag.Result);
+    var isRotated = (ViewBag.IsRotated ?? false) ? 1 : 0;
+}
+
+<script>
+    var coordJson = JSON.parse('@Html.Raw(jsonData)');
+    var isRotated = @Html.Raw(isRotated);
+    var gridSize = 400; // px size
+    var scale; // x px scale
+    var yScale; // y px scale
+    if (coordJson) {
+        scale = gridSize / coordJson.length;
+        yScale = getYScale(coordJson);
+    }
+
+    var canvas = document.getElementById('c1');
+    var ctx = canvas.getContext('2d');
+    x =0;
+
+    drawGrid();
+    drawParabola(coordJson);
+
+    function getYScale(coords) {
+        var max = coords[0].Y;
+        var min = max;
+        for (var coord in coords) {
+            if (coords.hasOwnProperty(coord)) {
+                var val = coords[coord].Y;
+                if (max < val) {
+                    max = val;
+                }
+                if (min > val) {
+                    min = val;
+                }
+            }
+        }
+        return Math.abs(gridSize / (max - min));
+    }
+
+    function drawGrid() {
+        for (var x = 0.5; x < gridSize; x += scale) {
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, gridSize);
+        }
+        for (var y = 0.5; y < gridSize; y += scale) {
+            ctx.moveTo(0, y);
+            ctx.lineTo(gridSize, y);
+        }
+        ctx.strokeStyle = "#eee";
+        ctx.stroke();
+    }
+
+    function drawParabola(coords) {
+        var yOffset = gridSize / 2;
+        ctx.fillStyle = "black";
+        ctx.font = "10px Arial";
+        var i = 0;
+        var prevCoord = 0;
+        ctx.beginPath();
+        ctx.strokeStyle = '#2299ff';
+        ctx.lineWidth = 3;
+        for (var coord in coords) {
+            if (coords.hasOwnProperty(coord)) {
+                var data = coords[coord];
+                var x = i * scale;
+                var y = isRotated ? (data.Y * yScale * -1): (gridSize - data.Y * yScale);
+                //ctx.fillRect(i * scale, gridSize - data.Y * scale, 2, 2);
+                ctx.lineTo(x, y);
+                if (i > 0) {
+                    //ctx.quadraticCurveTo(prevCoord.x, prevCoord.y, i * scale, gridSize - data.Y * yScale);
+
+                } else {
+                    ctx.moveTo(prevCoord.x, prevCoord.y);
+                }
+                if (i === coords.length - 1) {
+                    ctx.stroke();
+                }
+                ctx.fillText(data.X, x, gridSize);
+                ctx.fillText(data.Y, canvas.height/2, y);
+                ctx.fillRect(canvas.width/2,0,1,canvas.height);
+            }
+            i++;
+        }
+        ctx.moveTo(0, y);
+        ctx.lineTo(gridSize, y);
+    }
+</script>

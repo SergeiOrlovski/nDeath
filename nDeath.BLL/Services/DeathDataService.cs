@@ -19,9 +19,11 @@ namespace nDeath.BLL.Services
             Database = uow;
         }
 
-        public int FindParamsId(ParamDTO param)
+        public  Task<int> FindParamsIdAsync(ParamDTO param)
         {
-            var _param = Database.Parameters.Find(p =>
+            var task = Task.Run(() =>
+            {
+                var _param = Database.Parameters.Find(p =>
                 p.A == param.A &&
                 p.B == param.B &&
                 p.C == param.C &&
@@ -29,34 +31,45 @@ namespace nDeath.BLL.Services
                 p.RangeFrom == param.RangeFrom &&
                 p.RangeTo == param.RangeTo).FirstOrDefault();
 
-            if (_param != null)
-            {
-                return _param.ParamId;
-                
-            }
-            return -1;
+                if (_param != null)
+                {
+                    return _param.ParamId;
+
+                }
+                return -1;
+            });
+            return task;
+            
         }
 
-        public List<CacheDataDTO> GetCacheData(int id)
+        public  Task<List<CacheDataDTO>> GetCacheDataAsync(int id)
         {
-            var cacheDataList = Database.CacheData.Find(c => c.ParamId == id).ToList();
-            return ReplaseCacheData(cacheDataList);
+            var task =  Task.Run(() =>
+            {
+                var cacheDataList = Database.CacheData.Find(c => c.ParamId == id).ToList();
+                return ReplaseCacheData(cacheDataList);
+            });
+            return task;
+            
         }
 
-        public void AddParamsAndCacheData(ParamDTO param, List<CacheDataDTO> cacheData)
+        public  async Task AddParamsAndCacheDataAsync(ParamDTO param, List<CacheDataDTO> cacheData)
         {
-            Param _param = new Param
+            await Task.Run(() =>
             {
-                A = param.A,
-                B = param.B,
-                C = param.C,
-                Step = param.Step,
-                RangeFrom = param.RangeFrom,
-                RangeTo = param.RangeTo,
-                CacheDatas = ReplaseCacheData(cacheData)
-            };
-            Database.Parameters.Add(_param);
-            Database.Save();
+                Param _param = new Param
+                {
+                    A = param.A,
+                    B = param.B,
+                    C = param.C,
+                    Step = param.Step,
+                    RangeFrom = param.RangeFrom,
+                    RangeTo = param.RangeTo,
+                    CacheDatas = ReplaseCacheData(cacheData)
+                };
+                Database.Parameters.Add(_param);
+                Database.Save();
+            });
         }
 
         private List<CacheDataDTO> ReplaseCacheData(List<CacheData> cacheData)
